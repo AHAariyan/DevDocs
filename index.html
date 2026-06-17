@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Privacy Policy for DevDocs – Offline Developer Docs, an Android application." />
+  <title>Privacy Policy — DevDocs</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #0f0d13;
+      --surface:     #1a1625;
+      --border:      #2e2840;
+      --primary:     #c2678a;
+      --primary-dim: #8a3f5f;
+      --text:        #e8e0f0;
+      --text-muted:  #9e96b0;
+      --text-faint:  #5e5870;
+      --green:       #4caf7d;
+      --radius:      16px;
+      --radius-sm:   10px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .app-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #2a1f3d 0%, #141018 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      border: 1px solid var(--border);
+    }
+
+    .app-name {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.3px;
+    }
+
+    .app-tagline {
+      font-size: 13px;
+      color: var(--primary);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .updated-pill {
+      display: inline-block;
+      margin-top: 12px;
+      background: var(--border);
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.3px;
+    }
+
+    /* ── Layout ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── TL;DR card ── */
+    .tldr {
+      background: linear-gradient(135deg, #1e1530 0%, #1a1228 100%);
+      border: 1px solid var(--primary-dim);
+      border-radius: var(--radius);
+      padding: 28px;
+      margin-bottom: 48px;
+    }
+
+    .tldr-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .tldr-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    @media (max-width: 520px) {
+      .tldr-grid { grid-template-columns: 1fr; }
+    }
+
+    .tldr-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .tldr-item .dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .dot-yes  { background: #1e3a2a; color: var(--green); }
+    .dot-no   { background: #2e1a1a; color: #e57373; }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.3px;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section p {
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      font-size: 15px;
+    }
+
+    section p:last-child { margin-bottom: 0; }
+
+    /* ── Data table ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    .data-table th {
+      text-align: left;
+      padding: 10px 14px;
+      background: var(--surface);
+      color: var(--text-faint);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .data-table th:first-child { border-radius: var(--radius-sm) 0 0 0; }
+    .data-table th:last-child  { border-radius: 0 var(--radius-sm) 0 0; }
+
+    .data-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-muted);
+      vertical-align: top;
+    }
+
+    .data-table tr:last-child td { border-bottom: none; }
+
+    .data-table tr:hover td { background: var(--surface); }
+
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+
+    .badge-yes { background: #1e3a2a; color: var(--green); }
+    .badge-no  { background: #1e1e1e; color: var(--text-faint); }
+
+    /* ── Info cards ── */
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      margin-bottom: 12px;
+    }
+
+    .info-card strong {
+      display: block;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .info-card span {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .info-card a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .info-card a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    footer p {
+      color: var(--text-faint);
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    /* ── Utility ── */
+    .highlight { color: var(--text); font-weight: 500; }
+    .rose      { color: var(--primary); }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    ul li {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    ul li:last-child { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────── -->
+  <header>
+    <div class="app-badge">
+      <div class="app-icon">📖</div>
+      <div>
+        <div class="app-name">DevDocs</div>
+        <div class="app-tagline">Offline Developer Docs</div>
+      </div>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p>How DevDocs handles your data — short answer: it barely does.</p>
+    <span class="updated-pill">Last updated: June 17, 2026</span>
+  </header>
+
+  <!-- ── Main ───────────────────────────────── -->
+  <main>
+
+    <!-- TL;DR -->
+    <div class="tldr">
+      <div class="tldr-label">TL;DR — the short version</div>
+      <div class="tldr-grid">
+        <div class="tldr-item">
+          <div class="dot dot-yes">✓</div>
+          <span>Reads fully offline after download</span>
+        </div>
+        <div class="tldr-item">
+          <div class="dot dot-yes">✓</div>
+          <span>Anonymous crash & usage analytics only</span>
+        </div>
+        <div class="tldr-item">
+          <div class="dot dot-yes">✓</div>
+          <span>No account, no login, no profile</span>
+        </div>
+        <div class="tldr-item">
+          <div class="dot dot-yes">✓</div>
+          <span>Bookmarks & history stay on your device</span>
+        </div>
+        <div class="tldr-item">
+          <div class="dot dot-no">✗</div>
+          <span>No personal data collected</span>
+        </div>
+        <div class="tldr-item">
+          <div class="dot dot-no">✗</div>
+          <span>No ads, no tracking, no data selling</span>
+        </div>
+        <div class="tldr-item">
+          <div class="dot dot-no">✗</div>
+          <span>No reading history transmitted</span>
+        </div>
+        <div class="tldr-item">
+          <div class="dot dot-no">✗</div>
+          <span>No third-party advertising SDKs</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1. Who we are -->
+    <section>
+      <h2>1. Who We Are</h2>
+      <p>
+        DevDocs – Offline Developer Docs (<span class="highlight">com.devdocs.app</span>)
+        is an Android application that allows developers to download and browse
+        API documentation sets completely offline. The app is developed and
+        maintained by an independent developer.
+      </p>
+      <p>
+        This Privacy Policy explains what data is collected when you use DevDocs,
+        how it is used, and your rights. If you have any questions, contact us at
+        <a href="mailto:oi.dev.claude@gmail.com" class="rose">oi.dev.claude@gmail.com</a>.
+      </p>
+    </section>
+
+    <!-- 2. What we collect -->
+    <section>
+      <h2>2. What Data We Collect</h2>
+      <p>
+        DevDocs collects the minimum data necessary to maintain app stability and
+        understand which features are used. We do <span class="highlight">not</span>
+        collect personal information, reading history, search queries, bookmarks,
+        or any content you access within the app.
+      </p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>Collected</th>
+            <th>Purpose</th>
+            <th>Shared</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="highlight">App interactions</span><br>
+                <small>Screen views, feature events (e.g. "docset downloaded", "search performed")</small></td>
+            <td><span class="badge badge-yes">Yes</span></td>
+            <td>Understand which features are used; prioritise development</td>
+            <td>Firebase (Google)</td>
+          </tr>
+          <tr>
+            <td><span class="highlight">Crash logs</span><br>
+                <small>Stack traces, device model, OS version, app version at crash time</small></td>
+            <td><span class="badge badge-yes">Yes</span></td>
+            <td>Identify and fix stability issues</td>
+            <td>Firebase Crashlytics (Google)</td>
+          </tr>
+          <tr>
+            <td><span class="highlight">Anonymous installation ID</span><br>
+                <small>A random ID generated by Firebase — not linked to any identity</small></td>
+            <td><span class="badge badge-yes">Yes</span></td>
+            <td>De-duplicate analytics events across sessions</td>
+            <td>Firebase (Google)</td>
+          </tr>
+          <tr>
+            <td><span class="highlight">Reading history</span></td>
+            <td><span class="badge badge-no">No</span></td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><span class="highlight">Search queries</span></td>
+            <td><span class="badge badge-no">No</span></td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><span class="highlight">Bookmarks</span></td>
+            <td><span class="badge badge-no">No</span></td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><span class="highlight">Name, email, or any personal info</span></td>
+            <td><span class="badge badge-no">No</span></td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><span class="highlight">Location</span></td>
+            <td><span class="badge badge-no">No</span></td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><span class="highlight">Photos, contacts, microphone</span></td>
+            <td><span class="badge badge-no">No</span></td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 3. Internet usage -->
+    <section>
+      <h2>3. When DevDocs Uses the Internet</h2>
+      <p>
+        DevDocs connects to the internet in exactly two situations:
+      </p>
+      <ul>
+        <li>
+          <span class="highlight">Downloading documentation sets</span> — when you
+          tap "Install" on a docset in the Store tab, the app fetches the archive
+          from <span class="highlight">kapeli.com</span> over HTTPS. Once the
+          download completes, that docset is permanently available offline.
+        </li>
+        <li>
+          <span class="highlight">Sending anonymous analytics and crash reports</span>
+          — Firebase Analytics and Crashlytics transmit the events described in
+          Section 2 in the background.
+        </li>
+      </ul>
+      <p>
+        Every other feature — reading documentation, searching, bookmarking,
+        navigation, settings — works with <span class="highlight">zero network
+        connectivity</span>. The app is designed to function indefinitely in
+        airplane mode after docsets have been downloaded.
+      </p>
+    </section>
+
+    <!-- 4. In-app purchases -->
+    <section>
+      <h2>4. In-App Purchases (Optional Tips &amp; Sponsorships)</h2>
+      <p>
+        DevDocs offers optional one-time tips and sponsorship donations through
+        <span class="highlight">Google Play Billing</span>. These are entirely
+        voluntary — no feature in the app requires payment.
+      </p>
+      <p>
+        All payment processing is handled exclusively by Google Play. DevDocs
+        does not receive, store, or process your payment card details, billing
+        address, or any financial information. The only information we receive
+        from a completed purchase is a <span class="highlight">purchase token</span>
+        issued by Google Play, which we use solely to confirm the transaction and
+        mark it as fulfilled.
+      </p>
+      <p>
+        For information about how Google handles payment data, refer to the
+        <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice" class="rose" target="_blank" rel="noopener">
+          Google Payments Privacy Notice</a>.
+      </p>
+    </section>
+
+    <!-- 5. Third-party services -->
+    <section>
+      <h2>5. Third-Party Services</h2>
+
+      <div class="info-card">
+        <strong>Firebase Analytics (Google LLC)</strong>
+        <span>
+          Collects anonymous app usage events (screen views, feature interactions,
+          docset download counts). No personal data or content you read is included
+          in these events. Data is processed by Google on servers in the United States.
+          <br><br>
+          <a href="https://firebase.google.com/policies/analytics" target="_blank" rel="noopener">Firebase Analytics Privacy Policy →</a>
+        </span>
+      </div>
+
+      <div class="info-card">
+        <strong>Firebase Crashlytics (Google LLC)</strong>
+        <span>
+          Collects anonymous crash reports including stack traces, device model,
+          Android OS version, and app version. This data is used solely to identify
+          and fix stability issues. No content you read or search is included.
+          <br><br>
+          <a href="https://firebase.google.com/terms/crashlytics" target="_blank" rel="noopener">Firebase Crashlytics Terms →</a>
+        </span>
+      </div>
+
+      <div class="info-card">
+        <strong>Kapeli (kapeli.com)</strong>
+        <span>
+          Documentation sets are downloaded from kapeli.com, the host of the
+          open Dash docset format. DevDocs does not share any personal data
+          with Kapeli — the connection is a standard HTTPS file download.
+          <br><br>
+          <a href="https://kapeli.com/privacy" target="_blank" rel="noopener">Kapeli Privacy Policy →</a>
+        </span>
+      </div>
+
+      <div class="info-card">
+        <strong>Google Play Billing (Google LLC)</strong>
+        <span>
+          Processes optional in-app donations and tips. Payment data never
+          reaches DevDocs — it is handled entirely by Google Play.
+          <br><br>
+          <a href="https://play.google.com/about/privacy-security-deception/" target="_blank" rel="noopener">Google Play Privacy →</a>
+        </span>
+      </div>
+    </section>
+
+    <!-- 6. Data storage -->
+    <section>
+      <h2>6. Data Storage &amp; Retention</h2>
+      <p>
+        All data you create within DevDocs — bookmarks, search history,
+        settings, and downloaded documentation files — is stored
+        <span class="highlight">exclusively on your device</span> using
+        Android's local storage (Room database and app files directory).
+        This data is never uploaded to any server.
+      </p>
+      <p>
+        Anonymous analytics events sent to Firebase are retained by Google
+        for up to 14 months, after which they are automatically deleted,
+        in accordance with Firebase's standard retention policy.
+      </p>
+      <p>
+        Uninstalling DevDocs from your device removes all locally stored
+        data (docsets, bookmarks, search history, settings).
+      </p>
+    </section>
+
+    <!-- 7. Children -->
+    <section>
+      <h2>7. Children's Privacy</h2>
+      <p>
+        DevDocs is a developer tool intended for users aged 13 and above.
+        We do not knowingly collect any data from children under 13. If you
+        believe a child under 13 has used the app, please contact us at
+        <a href="mailto:oi.dev.claude@gmail.com" class="rose">oi.dev.claude@gmail.com</a>
+        and we will take appropriate action.
+      </p>
+    </section>
+
+    <!-- 8. Your rights -->
+    <section>
+      <h2>8. Your Rights</h2>
+      <p>
+        Because DevDocs does not collect personal data and requires no account,
+        there is no user profile to access, correct, or delete on our end.
+      </p>
+      <ul>
+        <li>
+          <span class="highlight">Local data</span> — delete bookmarks and search
+          history directly in the app (Settings → Clear search history / long-press
+          a docset to delete it). Uninstalling the app removes all local data.
+        </li>
+        <li>
+          <span class="highlight">Analytics opt-out</span> — you can disable
+          Firebase Analytics on your Android device via
+          <strong>Settings → Google → Ads → Opt out of Ads Personalisation</strong>,
+          or by enabling "Limit Ad Tracking" in your device settings.
+        </li>
+        <li>
+          <span class="highlight">Questions or requests</span> — contact
+          <a href="mailto:oi.dev.claude@gmail.com" class="rose">oi.dev.claude@gmail.com</a>
+          and we will respond within 30 days.
+        </li>
+      </ul>
+    </section>
+
+    <!-- 9. Security -->
+    <section>
+      <h2>9. Security</h2>
+      <p>
+        All network connections made by DevDocs use
+        <span class="highlight">HTTPS (TLS)</span>. Documentation files are
+        stored in the app's private files directory, which is not accessible
+        to other apps on the device. We do not transmit sensitive data over
+        unencrypted channels.
+      </p>
+    </section>
+
+    <!-- 10. Changes -->
+    <section>
+      <h2>10. Changes to This Policy</h2>
+      <p>
+        If this Privacy Policy changes in a way that affects how your data is
+        handled, we will update the "Last updated" date at the top of this page
+        and, where appropriate, notify you via an in-app notice on the next
+        app launch.
+      </p>
+      <p>
+        Continued use of DevDocs after a policy update constitutes acceptance
+        of the updated terms. We encourage you to review this page periodically.
+      </p>
+    </section>
+
+    <!-- 11. Contact -->
+    <section>
+      <h2>11. Contact</h2>
+      <div class="info-card">
+        <strong>Developer — DevDocs</strong>
+        <span>
+          For any privacy-related questions, data requests, or concerns:<br><br>
+          📧 <a href="mailto:oi.dev.claude@gmail.com">oi.dev.claude@gmail.com</a><br><br>
+          We aim to respond to all inquiries within 30 days.
+        </span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────── -->
+  <footer>
+    <p>
+      <strong style="color: var(--text);">DevDocs – Offline Developer Docs</strong>
+    </p>
+    <p>Privacy Policy · Last updated June 17, 2026</p>
+    <p style="margin-top: 12px;">
+      <a href="mailto:oi.dev.claude@gmail.com">oi.dev.claude@gmail.com</a>
+    </p>
+  </footer>
+
+</body>
+</html>
