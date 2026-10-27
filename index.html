@@ -305,8 +305,8 @@
       </div>
     </div>
     <h1>Privacy Policy</h1>
-    <p>How DevDocs handles your data — short answer: it barely does.</p>
-    <span class="updated-pill">Last updated: June 18, 2026</span>
+    <p>How DevDocs handles your data — short answer: very little, and only when you ask it to.</p>
+    <span class="updated-pill">Last updated: October 27, 2026</span>
   </header>
 
   <!-- ── Main ───────────────────────────────── -->
@@ -322,7 +322,7 @@
         </div>
         <div class="tldr-item">
           <div class="dot dot-yes">✓</div>
-          <span>Anonymous crash & usage analytics only</span>
+          <span>Crash reports &amp; usage analytics without names or content</span>
         </div>
         <div class="tldr-item">
           <div class="dot dot-yes">✓</div>
@@ -330,11 +330,15 @@
         </div>
         <div class="tldr-item">
           <div class="dot dot-yes">✓</div>
-          <span>Bookmarks & history stay on your device</span>
+          <span>Bookmarks, history &amp; study decks stay on your device</span>
         </div>
         <div class="tldr-item">
-          <div class="dot dot-no">✗</div>
-          <span>No personal data collected</span>
+          <div class="dot dot-yes">✓</div>
+          <span>Pro AI features send your question or selected text to our server and OpenAI, only when you use them</span>
+        </div>
+        <div class="tldr-item">
+          <div class="dot dot-yes">✓</div>
+          <span>AI text is not used to train models and is not stored by us</span>
         </div>
         <div class="tldr-item">
           <div class="dot dot-no">✗</div>
@@ -346,9 +350,17 @@
         </div>
         <div class="tldr-item">
           <div class="dot dot-no">✗</div>
+          <span>No card details — payments are handled by Google Play</span>
+        </div>
+        <div class="tldr-item">
+          <div class="dot dot-no">✗</div>
           <span>No third-party advertising SDKs</span>
         </div>
       </div>
+      <p style="margin-top: 16px; font-size: 13px; color: var(--text-muted);">
+        We don't ask for your name, email or any account details. The one thing we can't control is
+        what you type into an AI feature — so please don't include personal information there.
+      </p>
     </div>
 
     <!-- 1. Who we are -->
@@ -357,8 +369,10 @@
       <p>
         DevDocs – Offline Developer Docs (<span class="highlight">com.devdocs.app</span>)
         is an Android application that allows developers to download and browse
-        API documentation sets completely offline. The app is developed and
-        maintained by an independent developer.
+        API documentation sets completely offline. An optional paid subscription,
+        <span class="highlight">DevDocs Pro</span>, adds extra features including
+        AI features that work online. The app is developed and maintained by an
+        independent developer.
       </p>
       <p>
         This Privacy Policy explains what data is collected when you use DevDocs,
@@ -371,10 +385,10 @@
     <section>
       <h2>2. What Data We Collect</h2>
       <p>
-        DevDocs collects the minimum data necessary to maintain app stability and
-        understand which features are used. We do <span class="highlight">not</span>
-        collect personal information, reading history, search queries, bookmarks,
-        or any content you access within the app.
+        DevDocs collects the minimum data necessary to keep the app stable,
+        understand which features are used, and — only if you use DevDocs Pro AI
+        features — answer your requests. We do <span class="highlight">not</span>
+        collect your name, email, reading history, bookmarks, or what you read.
       </p>
 
       <table class="data-table">
@@ -383,30 +397,44 @@
             <th>Data Type</th>
             <th>Collected</th>
             <th>Purpose</th>
-            <th>Shared</th>
+            <th>Who processes it</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><span class="highlight">App interactions</span><br>
-                <small>Screen views, feature events (e.g. "docset downloaded", "search performed")</small></td>
+                <small>Screen views and feature events (e.g. "docset downloaded", "AI answer shown"), with counts and categories only — never your questions, search text, or page names</small></td>
             <td><span class="badge badge-yes">Yes</span></td>
             <td>Understand which features are used; prioritise development</td>
             <td>Firebase (Google)</td>
           </tr>
           <tr>
-            <td><span class="highlight">Crash logs</span><br>
-                <small>Stack traces, device model, OS version, app version at crash time</small></td>
+            <td><span class="highlight">Crash logs &amp; diagnostics</span><br>
+                <small>Stack traces, device model, OS version, app version, the ID of the docset open at crash time</small></td>
             <td><span class="badge badge-yes">Yes</span></td>
             <td>Identify and fix stability issues</td>
             <td>Firebase Crashlytics (Google)</td>
           </tr>
           <tr>
-            <td><span class="highlight">Anonymous installation ID</span><br>
-                <small>A random ID generated by Firebase — not linked to any identity</small></td>
+            <td><span class="highlight">Installation IDs</span><br>
+                <small>Random IDs created by Firebase and by DevDocs for this installation — not linked to your name or email</small></td>
             <td><span class="badge badge-yes">Yes</span></td>
-            <td>De-duplicate analytics events across sessions</td>
-            <td>Firebase (Google)</td>
+            <td>De-duplicate analytics; protect the AI service from abuse</td>
+            <td>Firebase (Google); our server (Microsoft Azure)</td>
+          </tr>
+          <tr>
+            <td><span class="highlight">AI requests</span> <span class="rose">(Pro, only when you use AI)</span><br>
+                <small>Your question and earlier questions/answers in the same conversation, text you select for "Explain", meaning-search queries, plus passages from the public documentation you downloaded</small></td>
+            <td><span class="badge badge-yes">Yes</span></td>
+            <td>Generate the answer, explanation, flashcards or search results you asked for</td>
+            <td>Our server (Microsoft Azure), then OpenAI</td>
+          </tr>
+          <tr>
+            <td><span class="highlight">Purchase receipt</span> <span class="rose">(Pro, only when you use AI)</span><br>
+                <small>The Google Play receipt for your Pro subscription and its signature (order ID, product, purchase time, purchase token)</small></td>
+            <td><span class="badge badge-yes">Yes</span></td>
+            <td>Confirm you have Pro; count your monthly AI credits</td>
+            <td>Our server (Microsoft Azure)</td>
           </tr>
           <tr>
             <td><span class="highlight">Reading history</span></td>
@@ -415,25 +443,25 @@
             <td>—</td>
           </tr>
           <tr>
-            <td><span class="highlight">Search queries</span></td>
+            <td><span class="highlight">Regular (offline) search queries</span></td>
             <td><span class="badge badge-no">No</span></td>
             <td>—</td>
             <td>—</td>
           </tr>
           <tr>
-            <td><span class="highlight">Bookmarks</span></td>
+            <td><span class="highlight">Bookmarks &amp; study decks</span></td>
             <td><span class="badge badge-no">No</span></td>
             <td>—</td>
             <td>—</td>
           </tr>
           <tr>
-            <td><span class="highlight">Name, email, or any personal info</span></td>
+            <td><span class="highlight">Name, email, or account details</span></td>
             <td><span class="badge badge-no">No</span></td>
             <td>—</td>
             <td>—</td>
           </tr>
           <tr>
-            <td><span class="highlight">Location</span></td>
+            <td><span class="highlight">Precise location (GPS)</span></td>
             <td><span class="badge badge-no">No</span></td>
             <td>—</td>
             <td>—</td>
@@ -452,62 +480,136 @@
     <section>
       <h2>3. When DevDocs Uses the Internet</h2>
       <p>
-        DevDocs connects to the internet in exactly two situations:
+        DevDocs connects to the internet only in these situations:
       </p>
       <ul>
         <li>
-          <span class="highlight">Downloading documentation sets</span> — when you
-          tap "Install" on a docset in the Store tab, the app fetches the archive
-          from <span class="highlight">kapeli.com</span> over HTTPS. Once the
-          download completes, that docset is permanently available offline.
+          <span class="highlight">Downloading and updating documentation sets</span> — when you
+          install a docset (or when Pro's automatic updates run), the app fetches the
+          documentation and its catalogue from <span class="highlight">kapeli.com</span>
+          and Kapeli's public feed on <span class="highlight">GitHub</span> over HTTPS.
+          Once downloaded, a docset is available offline.
         </li>
         <li>
-          <span class="highlight">Sending anonymous analytics and crash reports</span>
+          <span class="highlight">Sending analytics and crash reports</span>
           — Firebase Analytics and Crashlytics transmit the events described in
           Section 2 in the background.
         </li>
+        <li>
+          <span class="highlight">Purchases</span> — Google Play handles tips and the
+          DevDocs Pro subscription (see Section 5).
+        </li>
+        <li>
+          <span class="highlight">DevDocs Pro AI features</span> — only when you use
+          one of them (see Section 4).
+        </li>
       </ul>
       <p>
-        Every other feature — reading documentation, searching, bookmarking,
+        Every free feature — reading documentation, searching, bookmarking,
         navigation, settings — works with <span class="highlight">zero network
         connectivity</span>. The app is designed to function indefinitely in
         airplane mode after docsets have been downloaded.
       </p>
     </section>
 
-    <!-- 4. In-app purchases -->
+    <!-- 4. DevDocs Pro and AI features -->
     <section>
-      <h2>4. In-App Purchases (Optional Tips &amp; Sponsorships)</h2>
+      <h2>4. DevDocs Pro and AI Features</h2>
       <p>
-        DevDocs offers optional one-time tips and sponsorship donations through
-        <span class="highlight">Google Play Billing</span>. These are entirely
-        voluntary — no feature in the app requires payment.
+        DevDocs Pro includes AI features: <span class="highlight">Ask</span>
+        (questions answered from your downloaded docs), <span class="highlight">Explain</span>
+        (explain text you select on a page), <span class="highlight">meaning search</span>,
+        and <span class="highlight">Learn</span> (flashcards and quizzes made from doc pages).
+        <span class="highlight">Nothing is sent unless you use one of these features.</span>
+        If you never use them, DevDocs behaves exactly as described in Section 3.
+      </p>
+
+      <p><span class="highlight">What is sent when you use an AI feature</span></p>
+      <ul>
+        <li><strong>Ask:</strong> your question, the earlier questions and answers in the same conversation (for follow-ups), and short passages from the documentation you downloaded that match your question.</li>
+        <li><strong>Explain:</strong> the text you selected, the page title and docset name, and nearby documentation passages.</li>
+        <li><strong>Learn:</strong> the text of the documentation page(s) you chose.</li>
+        <li><strong>Meaning search</strong> (if turned on): your search text or question, and the public documentation text of the docsets you prepare for AI (again after a docset update), so it can be converted into a search index (numbers) that is stored on your device.</li>
+        <li><strong>Every AI request</strong> also carries your Google Play Pro receipt and its signature (so the server can confirm you have Pro) and a random installation ID.</li>
+      </ul>
+      <p>
+        Text that looks like a password, API key or private key is blocked on your
+        device and never sent. Even so, <span class="highlight">please don't type or select
+        personal or confidential information</span> (names, emails, private code, secrets)
+        in AI features — whatever you send is processed as described here.
+      </p>
+
+      <p><span class="highlight">Who receives it</span></p>
+      <ul>
+        <li>
+          <strong>Our server</strong>, which runs on <strong>Microsoft Azure</strong>
+          (Southeast Asia region). It checks your receipt, deducts an AI credit and
+          forwards the request. It does <em>not</em> store your questions, selected text
+          or answers. It keeps only: a monthly credit counter keyed by a one-way hash
+          (SHA-256) of your purchase token — never the token itself — and technical
+          logs with counts, timings and error codes, without any request text.
+        </li>
+        <li>
+          <strong>OpenAI</strong>, which generates the answer as our service provider
+          (processor). We send requests with OpenAI's storage turned off and include only
+          a hashed, pseudonymous identifier (derived from the purchase hash) that OpenAI
+          uses to detect abuse. Under OpenAI's API policies, this data is
+          <span class="highlight">not used to train OpenAI's models</span>, and OpenAI
+          may keep it for up to <span class="highlight">30 days</span> for abuse
+          monitoring before deleting it, unless the law requires longer. OpenAI may
+          process data in the United States.
+          <a href="https://developers.openai.com/api/docs/guides/your-data" class="rose" target="_blank" rel="noopener">OpenAI: your data →</a>
+        </li>
+      </ul>
+
+      <p><span class="highlight">What stays on your device</span></p>
+      <p>
+        Study decks and their review progress, and the meaning-search index, are
+        stored only on your device. Ask conversations and Explain answers are not
+        saved after you leave the screen. If you report an AI answer, the report
+        (an answer ID and the reason you picked — no text) is kept on your device.
+      </p>
+    </section>
+
+    <!-- 5. In-app purchases -->
+    <section>
+      <h2>5. In-App Purchases (Tips &amp; DevDocs Pro)</h2>
+      <p>
+        DevDocs offers optional one-time tips and an optional
+        <span class="highlight">DevDocs Pro subscription</span> through
+        <span class="highlight">Google Play Billing</span>. Every free feature
+        stays free; nothing that was free requires payment.
       </p>
       <p>
-        All payment processing is handled exclusively by Google Play. DevDocs
-        does not receive, store, or process your payment card details, billing
-        address, or any financial information. The only information we receive
-        from a completed purchase is a <span class="highlight">purchase token</span>
-        issued by Google Play, which we use solely to confirm the transaction and
-        mark it as fulfilled.
+        All payment processing is handled by Google Play. DevDocs never receives
+        or stores your card details, billing address, or other payment
+        information. What we receive from Google Play is a
+        <span class="highlight">signed purchase receipt</span> (order ID, product,
+        purchase time and purchase token). For tips, it is used on your device only,
+        to confirm the purchase. For DevDocs Pro, it is kept on your device and sent to
+        our server with each AI request so the server can verify the subscription
+        (Section 4). When buying, the app also passes Google Play a hashed form of the
+        random installation ID, which helps Google Play detect fraud.
       </p>
       <p>
         For information about how Google handles payment data, refer to the
         <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice" class="rose" target="_blank" rel="noopener">
-          Google Payments Privacy Notice</a>.
+          Google Payments Privacy Notice</a>. You can manage or cancel your subscription in
+        the Google Play Store app.
       </p>
     </section>
 
-    <!-- 5. Third-party services -->
+    <!-- 6. Third-party services -->
     <section>
-      <h2>5. Third-Party Services</h2>
+      <h2>6. Third-Party Services</h2>
 
       <div class="info-card">
         <strong>Firebase Analytics (Google LLC)</strong>
         <span>
-          Collects anonymous app usage events (screen views, feature interactions,
-          docset download counts). No personal data or content you read is included
-          in these events. Data is processed by Google on servers in the United States.
+          Collects app usage events (screen views, feature interactions,
+          docset download counts) linked to a random installation ID. No questions,
+          search text or content you read is included in these events. Data is
+          processed by Google, including on servers in the United States.
           <br><br>
           <a href="https://firebase.google.com/policies/analytics" target="_blank" rel="noopener">Firebase Analytics Privacy Policy →</a>
         </span>
@@ -516,7 +618,7 @@
       <div class="info-card">
         <strong>Firebase Crashlytics (Google LLC)</strong>
         <span>
-          Collects anonymous crash reports including stack traces, device model,
+          Collects crash reports including stack traces, device model,
           Android OS version, and app version. This data is used solely to identify
           and fix stability issues. No content you read or search is included.
           <br><br>
@@ -525,11 +627,35 @@
       </div>
 
       <div class="info-card">
+        <strong>Microsoft Azure (Microsoft Corporation) — Pro AI features only</strong>
+        <span>
+          Hosts our AI server in the Southeast Asia region. Azure's monitoring service
+          records technical request data (time, duration, status code) for 30 days; by
+          Microsoft's default it may derive an approximate city/country from the
+          connection's IP address and then discards the IP address itself.
+          <br><br>
+          <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Microsoft Privacy Statement →</a>
+        </span>
+      </div>
+
+      <div class="info-card">
+        <strong>OpenAI (OpenAI, L.L.C.) — Pro AI features only</strong>
+        <span>
+          Generates AI answers, explanations, study cards and meaning-search vectors
+          on our behalf. API data is not used for training and is kept for up to
+          30 days for abuse monitoring (see Section 4).
+          <br><br>
+          <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI Privacy Policy →</a>
+        </span>
+      </div>
+
+      <div class="info-card">
         <strong>Kapeli (kapeli.com)</strong>
         <span>
           Documentation sets are downloaded from kapeli.com, the host of the
-          open Dash docset format. DevDocs does not share any personal data
-          with Kapeli — the connection is a standard HTTPS file download.
+          open Dash docset format, and its public feed on GitHub. DevDocs does not
+          share any personal data with Kapeli — the connection is a standard HTTPS
+          file download.
           <br><br>
           <a href="https://kapeli.com/privacy" target="_blank" rel="noopener">Kapeli Privacy Policy →</a>
         </span>
@@ -538,38 +664,39 @@
       <div class="info-card">
         <strong>Google Play Billing (Google LLC)</strong>
         <span>
-          Processes optional in-app donations and tips. Payment data never
-          reaches DevDocs — it is handled entirely by Google Play.
+          Processes optional tips and the DevDocs Pro subscription. Payment data
+          never reaches DevDocs — it is handled entirely by Google Play.
           <br><br>
           <a href="https://play.google.com/about/privacy-security-deception/" target="_blank" rel="noopener">Google Play Privacy →</a>
         </span>
       </div>
     </section>
 
-    <!-- 6. Data storage -->
+    <!-- 7. Data storage -->
     <section>
-      <h2>6. Data Storage &amp; Retention</h2>
+      <h2>7. Data Storage &amp; Retention</h2>
       <p>
-        All data you create within DevDocs — bookmarks, search history,
+        All data you create within DevDocs — bookmarks, search history, study decks,
         settings, and downloaded documentation files — is stored
-        <span class="highlight">exclusively on your device</span> using
-        Android's local storage (Room database and app files directory).
-        This data is never uploaded to any server.
+        <span class="highlight">on your device</span> using Android's local storage.
+        It is not uploaded to our servers. (If Android backup is turned on for your
+        Google account, Android may include app settings in your own device backup.)
       </p>
-      <p>
-        Anonymous analytics events sent to Firebase are retained by Google
-        for up to 14 months, after which they are automatically deleted,
-        in accordance with Firebase's standard retention policy.
-      </p>
+      <ul>
+        <li><span class="highlight">AI request text</span> (questions, selected text, passages): not stored by our server; held only while your request is processed. OpenAI may keep it for up to 30 days for abuse monitoring.</li>
+        <li><span class="highlight">AI credit counters</span>: one record per subscription per month, containing only numbers (credits used) and keyed by a one-way hash of your purchase token. Kept so monthly limits work; we delete records on request (see Section 9).</li>
+        <li><span class="highlight">Server technical logs</span> (no request text, no tokens, no IP addresses): kept for 30 days, then deleted automatically.</li>
+        <li><span class="highlight">Analytics events</span>: retained by Google for up to 14 months, then automatically deleted, in line with Firebase's retention settings.</li>
+      </ul>
       <p>
         Uninstalling DevDocs from your device removes all locally stored
-        data (docsets, bookmarks, search history, settings).
+        data (docsets, bookmarks, search history, study decks, settings).
       </p>
     </section>
 
-    <!-- 7. Children -->
+    <!-- 8. Children -->
     <section>
-      <h2>7. Children's Privacy</h2>
+      <h2>8. Children's Privacy</h2>
       <p>
         DevDocs is a developer tool intended for users aged 13 and above.
         We do not knowingly collect any data from children under 13. If you
@@ -579,24 +706,36 @@
       </p>
     </section>
 
-    <!-- 8. Your rights -->
+    <!-- 9. Your rights -->
     <section>
-      <h2>8. Your Rights</h2>
+      <h2>9. Your Rights &amp; Deleting Your Data</h2>
       <p>
-        Because DevDocs does not collect personal data and requires no account,
-        there is no user profile to access, correct, or delete on our end.
+        DevDocs requires no account, so there is no user profile to access or
+        correct on our end. You can still control and delete your data:
       </p>
       <ul>
         <li>
-          <span class="highlight">Local data</span> — delete bookmarks and search
-          history directly in the app (Settings → Clear search history / long-press
-          a docset to delete it). Uninstalling the app removes all local data.
+          <span class="highlight">Local data</span> — delete bookmarks, search
+          history, study decks and docsets directly in the app. Uninstalling the
+          app removes all local data.
         </li>
         <li>
-          <span class="highlight">Analytics opt-out</span> — you can disable
-          Firebase Analytics on your Android device via
-          <strong>Settings → Google → Ads → Opt out of Ads Personalisation</strong>,
-          or by enabling "Limit Ad Tracking" in your device settings.
+          <span class="highlight">AI features</span> — simply don't use them and nothing
+          is sent. Ask conversations are not saved.
+        </li>
+        <li>
+          <span class="highlight">Server data deletion</span> — email
+          <a href="mailto:abdulhady.aariyan@gmail.com" class="rose">abdulhady.aariyan@gmail.com</a>
+          with the subject "DevDocs data deletion" and your Google Play order ID
+          (it starts with "GPA."). We will use it to find and delete the AI credit
+          records linked to your subscription. Because we store only hashes and no request text, there is
+          nothing else on our server to delete. Data held by OpenAI for abuse
+          monitoring is deleted automatically within 30 days.
+        </li>
+        <li>
+          <span class="highlight">Analytics</span> — analytics and crash data are tied
+          only to random installation IDs, not to you. Uninstalling the app (or clearing
+          its data) starts a new ID. Contact us with any questions about this data.
         </li>
         <li>
           <span class="highlight">Questions or requests</span> — contact
@@ -606,21 +745,22 @@
       </ul>
     </section>
 
-    <!-- 9. Security -->
+    <!-- 10. Security -->
     <section>
-      <h2>9. Security</h2>
+      <h2>10. Security</h2>
       <p>
         All network connections made by DevDocs use
         <span class="highlight">HTTPS (TLS)</span>. Documentation files are
         stored in the app's private files directory, which is not accessible
-        to other apps on the device. We do not transmit sensitive data over
-        unencrypted channels.
+        to other apps on the device. Our server stores purchase tokens only as
+        one-way hashes, keeps its secrets in Azure Key Vault, and does not log
+        request text. We do not transmit data over unencrypted channels.
       </p>
     </section>
 
-    <!-- 10. Changes -->
+    <!-- 11. Changes -->
     <section>
-      <h2>10. Changes to This Policy</h2>
+      <h2>11. Changes to This Policy</h2>
       <p>
         If this Privacy Policy changes in a way that affects how your data is
         handled, we will update the "Last updated" date at the top of this page
@@ -633,9 +773,9 @@
       </p>
     </section>
 
-    <!-- 11. Contact -->
+    <!-- 12. Contact -->
     <section>
-      <h2>11. Contact</h2>
+      <h2>12. Contact</h2>
       <div class="info-card">
         <strong>Developer — DevDocs</strong>
         <span>
@@ -653,7 +793,7 @@
     <p>
       <strong style="color: var(--text);">DevDocs – Offline Developer Docs</strong>
     </p>
-    <p>Privacy Policy · Last updated June 18, 2026</p>
+    <p>Privacy Policy · Last updated October 27, 2026</p>
     <p style="margin-top: 12px;">
       <a href="mailto:abdulhady.aariyan@gmail.com">abdulhady.aariyan@gmail.com</a>
     </p>
